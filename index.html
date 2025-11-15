@@ -42,6 +42,16 @@
         color: white;
         margin-top: 40px;
     }
+    
+/* Disable hover effects on the Elfsight widget */
+.elfsight-app-681527cb-1f84-4940-8d3e-b5aee5553901 * {
+    pointer-events: none; /* disables hover interactions */
+}
+
+/* If you want to still allow scrolling inside the widget, use this instead */
+.elfsight-app-681527cb-1f84-4940-8d3e-b5aee5553901 * {
+    transition: none !important; /* disables hover animations */
+}
 </style>
 </head>
 <body>
@@ -207,81 +217,10 @@
     
           
 
-<!-- Google Reviews Section -->
-<section id="google-reviews" class="py-5 bg-light">
-  <div class="container">
-    <h3 class="text-center mb-4">What Our Guests Say</h3>
-    <div id="reviews-carousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner" id="reviews-container">
-        <!-- Reviews will be inserted here by JS -->
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#reviews-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#reviews-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- Add Bootstrap CSS & JS in <head> or before closing </body> -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  // Replace with your actual Google Places API Key
-  const API_KEY = 'YOUR_GOOGLE_PLACES_API_KEY';
-
-  // Your Google Place ID
-  const PLACE_ID = 'ChIJ8ZV8Uccf2jsR6L7WMDY6r6c';
-
-  async function fetchGoogleReviews() {
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating&key=${API_KEY}`;
-
-    try {
-      // Use a proxy server or your backend to avoid CORS issue, or enable CORS on your server
-      const response = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
-      const data = await response.json();
-
-      if (data.status === 'OK') {
-        const reviews = data.result.reviews;
-        const container = document.getElementById('reviews-container');
-
-        reviews.forEach((review, index) => {
-          container.innerHTML += `
-            <div class="carousel-item ${index === 0 ? 'active' : ''}">
-              <div class="card p-4">
-                <div class="d-flex align-items-center mb-3">
-                  <img src="${review.profile_photo_url || 'https://via.placeholder.com/64'}" alt="${review.author_name}" class="rounded-circle me-3" width="64" height="64" />
-                  <div>
-                    <h5 class="mb-0">${review.author_name}</h5>
-                    <small class="text-muted">${new Date(review.time * 1000).toLocaleDateString()}</small>
-                  </div>
-                </div>
-                <p>⭐ ${review.rating} / 5</p>
-                <p>${review.text}</p>
-              </div>
-            </div>
-          `;
-        });
-      } else {
-        console.error('Error fetching Google reviews:', data.status);
-        document.getElementById('google-reviews').innerHTML = `<p class="text-danger text-center">Unable to load reviews at this time.</p>`;
-      }
-    } catch (error) {
-      console.error('Fetch error:', error);
-      document.getElementById('google-reviews').innerHTML = `<p class="text-danger text-center">Unable to load reviews at this time.</p>`;
-    }
-  }
-
-  fetchGoogleReviews();
-</script>
-
-
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-681527cb-1f84-4940-8d3e-b5aee5553901" data-elfsight-app-lazy></div>
+            
      
         </div>
     </div>
@@ -309,4 +248,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
+
 </html>

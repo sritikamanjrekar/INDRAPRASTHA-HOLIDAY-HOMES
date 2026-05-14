@@ -1,652 +1,412 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indraprastha Holiday Homes | Best Stay Near Aaravi Beach</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Indraprastha Holiday Homes | Best Stay Near Aaravi Beach, Maharashtra</title>
-
-
-         <meta name="description"
-        content="Indraprastha Holiday Homes offers clean & affordable rooms near Aaravi Beach, Maharashtra. AC & Non-AC rooms, free Wi-Fi, parking, 24x7 water & peaceful nature stay. Call now!">
-
-    <!-- SEO KEYWORDS (optional but useful locally) -->
-    <meta name="keywords"
-        content="Indraprastha Holiday Homes, Aaravi stay, holiday homes near  Beach, budget hotel in , Aaravi beach rooms, family stay ">
-
-    <!-- LOCAL SEO -->
-    <meta name="geo.region" content="IN-MH">
-    <meta name="geo.placename" content="Aaravi beach, Maharashtra">
-    <meta name="geo.position" content="18.0939061;72.9887721">
-    <meta name="ICBM" content="18.0939061, 72.9887721">
-
-    <!-- Open Graph (for WhatsApp / Facebook sharing) -->
-    <meta property="og:title" content="Indraprastha Holiday Homes Peaceful Stay Near  Beach">
-    <meta property="og:description"
-        content="Clean rooms, AC & Non-AC options, free Wi-Fi & parking near Aaravi Beach. Ideal for families & couples.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="my-images/aaravi-beach-maharashtra.jpg">
-    <meta property="og:locale" content="en_IN">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- LOCAL BUSINESS SCHEMA -->
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Indraprastha Holiday Homes",
-  "image": "my-images/aaravi-beach-maharashtra.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Near Hanuman Temple, At Po Aaravi, Tal. Shrivardhan, Dist. Raigad",
-    "addressLocality": "Aaravi",
-    "addressRegion": "Maharashtra",
-    "postalCode": "402113",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 18.0939061,
-    "longitude": 72.9887721
-  },
-  "telephone": "+91-8879148416",
-  "priceRange": "₹₹",
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi" },
-    { "@type": "LocationFeatureSpecification", "name": "Free Parking" },
-    { "@type": "LocationFeatureSpecification", "name": "24x7 Hot Water" },
-    { "@type": "LocationFeatureSpecification", "name": "CCTV Security" }
-  ]
-}
-</script>
-
-
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
 
     <style>
-        body {
-            background: #f1f3f8;
-        }
+      :root {
+        --beige-bg: #f5f2ed; /* Soft Beige */
+        --gold-primary: #d4af37; /* Metallic Gold */
+        --gold-dark: #b8860b; /* Deep Gold */
+        --white: #ffffff;
+        --dark-text: #4a4031; /* Deep Bronze/Brown for text */
+      }
 
+      body {
+        background-color: var(--white);
+        color: var(--dark-text);
+        font-family: "Georgia", serif; /* Elegant serif font */
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background-color: var(--white) !important;
+        border-bottom: 3px solid var(--gold-primary);
+      }
+      .navbar-brand,
+      .nav-link {
+        color: var(--dark-text) !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .nav-link:hover {
+        color: var(--gold-primary) !important;
+      }
+
+      /* HERO SECTION */
+      .hero {
+        background:
+          linear-gradient(rgba(74, 64, 49, 0.4), rgba(74, 64, 49, 0.4)),
+          url("my-images/aaravi-beach-maharashtra.jpg") center/cover no-repeat;
+        min-height: 65vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        text-align: center;
+        padding: 60px 20px;
+      }
+      .hero h1 {
+        font-size: calc(2rem + 1.5vw);
+        font-weight: 700;
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      /* BUTTONS */
+      .btn-gold {
+        background-color: var(--gold-primary);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.3s;
+        border-radius: 5px;
+      }
+      .btn-gold:hover {
+        background-color: var(--gold-dark);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      /* SECTION STYLING */
+      .section-bg-beige {
+        background-color: var(--beige-bg);
+      }
+      .section-title {
+        color: var(--gold-dark);
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+      }
+      .section-title::after {
+        content: "";
+        width: 60px;
+        height: 3px;
+        background: var(--gold-primary);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* AMENITIES */
+      .amenity-box {
+        background: var(--white);
+        border: 1px solid #e0d8cc;
+        border-radius: 8px;
+        padding: 25px 15px;
+        text-align: center;
+        height: 100%;
+        transition: 0.3s;
+      }
+      .amenity-box:hover {
+        border-color: var(--gold-primary);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+      }
+      .amenity-box i {
+        color: var(--gold-primary);
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      /* ROOM CARDS */
+      .card {
+        border: none;
+        border-radius: 0;
+        background-color: var(--white);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      .card-body {
+        border-top: 4px solid var(--gold-primary);
+        padding: 20px;
+      }
+      .card-title {
+        color: var(--gold-dark);
+        font-weight: 700;
+      }
+
+      /* IMAGES/VIDEOS */
+      .carousel-item img,
+      .carousel-item video {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+      }
+
+      /* STICKY FOOTER MOBILE */
+      .mobile-action-bar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: none;
+        z-index: 1000;
+        background: var(--white);
+        padding: 10px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        border-top: 2px solid var(--gold-primary);
+      }
+
+      footer {
+        background-color: var(--dark-text);
+        color: var(--beige-bg);
+        padding: 50px 20px 100px 20px;
+      }
+
+      /* RESPONSIVE FIXES */
+      @media (max-width: 768px) {
+        .mobile-action-bar {
+          display: flex;
+          gap: 10px;
+        }
         .hero {
-            background: url('images/hero.jpg') center/cover no-repeat;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 0px 0px 8px black;
+          min-height: 50vh;
         }
-
-        .section-title {
-            font-weight: 700;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .amenity-box {
-            background: #fff;
-            border-radius: 8px;
-            padding: 18px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background: #1a3d7c;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            margin-top: 40px;
-        }
-
-        /* MOBILE RESPONSIVE FIXES */
-        @media (max-width: 768px) {
-
-            .hero {
-                height: 45vh;
-                padding: 20px;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            /* Amenities spacing */
-            .amenity-box i {
-                margin-bottom: 8px;
-                display: block;
-            }
-
-            /* Gallery & room images fit */
-            img,
-            video {
-                max-height: 260px;
-                object-fit: cover;
-            }
-
-            /* Map iframe full width */
-            iframe {
-                width: 100% !important;
-                height: 350px !important;
-            }
-
-            /* Cards reduce padding */
-            .card-body h5 {
-                font-size: 1.1rem;
-            }
-
-            .card-body p {
-                font-size: 0.9rem;
-            }
-
-            /* Reduce Instagram embed gap */
-            blockquote.instagram-media {
-                width: 100% !important;
-                margin: 0 auto !important;
-            }
-
-            /* Make navbar collapse smooth */
-            .navbar-nav .nav-link {
-                margin: 8px 0;
-                text-align: center;
-            }
-        }
-
-        /* EXTRA — Small Phones */
-        @media (max-width: 480px) {
-            .hero {
-                height: 40vh;
-            }
-
-            .hero h1 {
-                font-size: 1.4rem;
-                line-height: 1.4;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-        }
-
-
-        .carousel-item img {
-            height: 350px !important;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        .carousel-item video {
-            height: 600px !important;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        #gallery .carousel-item img {
-            height: 600px !important;
-            object-fit:contain;
-            width: 100%;
-        }
-        .hero {
-    background-image: url('my-images/aaravi-beach-maharashtra.jpg'); /* your image */
-    background-size: cover;      /* fills entire section */
-    background-position: center; /* center focus */
-    background-repeat: no-repeat;
-    padding: 120px 0;            /* spacing top/bottom */
-    color: white;                /* text white on dark background */
-    position: relative;
-}
-
-
-        .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.45); /* dark layer */
-    z-index: 1;
-}
-.hero * {
-    position: relative;
-    z-index: 2; /* bring text above overlay */
-}
-
+        .row.g-3 > div {
+          width: 50%;
+        } /* 2 per row on mobile */
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient py-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Indraprastha Holiday Homes</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#rooms" class="nav-link">Rooms</a></li>
-                    <li class="nav-item"><a href="#amenities" class="nav-link">Amenities</a></li>
-                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <span
+            style="color: var(--gold-primary); font-size: 1.5rem"
+            class="me-2"
+            >✦</span
+          >
+          Indraprastha
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <i class="bi bi-list" style="color: var(--gold-primary)"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#rooms" class="nav-link">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a href="#amenities" class="nav-link">Amenities</a>
+            </li>
+            <li class="nav-item">
+              <a href="#gallery" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="text-center">
-            <h1 class="display-4 fw-bold">Holiday Home Near Aaravi Beach, Maharashtra</h1>
-            <p class="fs-4">Clean Rooms • 24×7 Service • Nature Surroundings • Clean AC & Non-AC Rooms • Free Wi-Fi • Peaceful Nature Stay</p>
-            <a href="tel:+918879148416" class="btn btn-success btn-lg mt-3">
-                <i class="bi bi-telephone-fill"></i> Check Availability +918879148416
-            </a>
+      <div class="container">
+        <h1 class="mb-3">Premium Holiday Home Near Aaravi Beach</h1>
+        <p class="lead mb-4" style="color: var(--beige-bg)">
+          Elegance • Nature • Comfort
+        </p>
+        <div class="d-none d-md-block">
+          <a href="tel:+918879148416" class="btn btn-gold px-5"
+            >Check Availability</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="container py-5">
-        <h2 class="section-title">About Us</h2>
-        <p class="text-center">
-    <strong>Indraprastha Holiday Homes in Aaravi, near Aaravi beach</strong> offers a peaceful and affordable stay just minutes from
-    <strong>Aaravi Beach</strong>. Surrounded by greenery, temples, and scenic hills, our holiday home is ideal
-    for families, couples, and group travelers.
-    Enjoy clean rooms, 24×7 hot & cold water, free Wi-Fi, CCTV security, parking, and a calm village atmosphere near
-    Aaravi Beach, Maharashtra.
-</p>
-
+    <section id="about" class="container py-5 text-center">
+      <h2 class="section-title">Experience Serenity</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="fs-5">
+            Nestled in the heart of <b>Aaravi Village</b>, Indraprastha Holiday
+            Homes combines modern comfort with a touch of traditional golden
+            hospitality. Located just minutes from the pristine Aaravi Beach.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- AMENITIES -->
-    <section id="amenities" class="container py-5">
-        <h2 class="section-title">Amenities</h2>
-
+    <!-- AMENITIES (Beige Section) -->
+    <section id="amenities" class="section-bg-beige py-5">
+      <div class="container">
+        <h2 class="text-center section-title">Guest Amenities</h2>
         <div class="row g-3">
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-wifi fs-2"></i>
-                    <p>Free Wi-Fi</p>
-                </div>
+          <div class="col-6 col-md-4">
+            <div class="amenity-box">
+              <i class="bi bi-wifi"></i>
+              <span class="fw-bold">Free Wi-Fi</span>
             </div>
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-water fs-2"></i>
-                    <p>Hot & Cold Water</p>
-                </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="amenity-box">
+              <i class="bi bi-thermometer-sun"></i>
+              <span class="fw-bold">Hot Water</span>
             </div>
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-camera-video fs-2"></i>
-                    <p>CCTV Security</p>
-                </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="amenity-box">
+              <i class="bi bi-shield-check"></i>
+              <span class="fw-bold">CCTV Secure</span>
             </div>
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-car-front fs-2"></i>
-                    <p>Free Parking</p>
-                </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="amenity-box">
+              <i class="bi bi-p-circle"></i>
+              <span class="fw-bold">Free Parking</span>
             </div>
-
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-lightning-charge fs-2"></i>
-                    <p>Electricity Backup</p>
-                </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="amenity-box">
+              <i class="bi bi-lightning"></i>
+              <span class="fw-bold">Power Backup</span>
             </div>
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-person-lines-fill fs-2"></i>
-                    <p>24×7 Help Desk</p>
-                </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="amenity-box">
+              <i class="bi bi-cup-hot"></i>
+              <span class="fw-bold">Breakfast</span>
             </div>
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-door-closed fs-2"></i>
-                    <p>Security Door</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="amenity-box"><i class="bi bi-bank fs-2"></i>
-                    <p>Temples Near-by</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="amenity-box ">
-                    <i class="bi bi-egg-fried fs-2"></i>
-                    <p>Breakfast Available</p>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ROOMS -->
     <section id="rooms" class="container py-5">
-        <h2 class="section-title">Rooms</h2>
-
-        <div class="row g-4">
-
-            <!-- ROOM 1 -->
-            <div class="col-md-6">
-                <div class="card shadow">
-                    <div id="room1Slider" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <!-- Replace these with your images -->
-                            <div class="carousel-item active"><img src="my-images/room-1/1.jpeg" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item"><img src="my-images/room-1/1.jpeg" class="d-block w-100"></div>
-                            <!-- Add videos -->
-                            <!-- <div class="carousel-item"><video class="d-block w-100" controls>
-                                    <source src="videos/room1.mp4">
-                                </video></div> -->
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h5>Room 1 – AC (Shared Washroom)</h5>
-                        <p>AC • TV • Fan • Clean Bed • Shared Washroom</p>
-                    </div>
-                </div>
+      <h2 class="text-center section-title">Our Accommodations</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm">
+            <img src="my-images/room-1/1.jpeg" alt="Deluxe AC Room" />
+            <div class="card-body">
+              <h5 class="card-title">Deluxe AC Suite</h5>
+              <p class="small mb-0">
+                Experience the ultimate comfort with full climate control and
+                premium bedding.
+              </p>
             </div>
-
-            <!-- ROOM 2 -->
-            <div class="col-md-6">
-                <div class="card shadow">
-                    <div id="room2Slider" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active"><img src="my-images/room-2/1.jpeg" class="d-block w-100"
-                                alt="AC Room at Indraprastha Holiday Homes near Aaravi  Beach"
-                                >
-                            </div>
-                            <div class="carousel-item"><img src="my-images/room-2/r.jpeg" class="d-block w-100" alt="AC Room at Indraprastha Holiday Homes near Aaravi  Beach"></div>
-                            <!-- <div class="carousel-item"><video class="d-block w-100" controls>
-                                    <source src="my-images/room-2/v.mp4">
-                                </video></div> -->
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h5>Room 2 – AC (Attached Washroom)</h5>
-                        <p>AC • TV • Fan • Attached Washroom</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ROOM 3 -->
-            <div class="col-md-6">
-                <div class="card shadow">
-                    <div id="room3Slider" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active"><img src="my-images/room-3/1.jpeg" class="d-block w-100" alt="Non AC room near Aaravi  Beach">
-                            </div>
-                            <div class="carousel-item "><img src="my-images/room-3/2.jpeg" class="d-block w-100" alt="Non AC room near Aaravi  Beach">
-                            </div>
-                            <div class="carousel-item "><img src="my-images/room-3/3.jpeg" class="d-block w-100" alt="Non AC room near Aaravi  Beach">
-                            </div>
-
-                            <!-- <div class="carousel-item"><video class="d-block w-100" controls>
-                                    <source src="videos/room3.mp4">
-                                </video></div> -->
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h5>Room 3 – Non-AC (Shared Washroom)</h5>
-                        <p>Non-AC • Fan • Shared Washroom</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ROOM 4 -->
-            <div class="col-md-6">
-                <div class="card shadow">
-                    <div id="room4Slider" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active"><img src="my-images/room-4/1.jpeg" class="d-block w-100" alt="Non AC room near Aaravi  Beach">
-                            </div>
-                            <div class="carousel-item"><img src="my-images/room-4/2.jpeg" class="d-block w-100" alt="Non AC room near Aaravi  Beach">
-                            </div>
-                            <div class="carousel-item"><img src="my-images/room-4/r4-wr.jpeg" class="d-block w-100" alt="Non AC room near Aaravi  Beach">
-                            </div>
-
-                            <!-- <div class="carousel-item">
-                                
-                                <video class="d-block w-100" controls>
-                                    <source src="my-images/room-4/r4-video.mp4">
-                                </video>
-                            </div> -->
-
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h5>Room 4 – Non-AC (Shared Washroom)</h5>
-                        <p>Non-AC • Fan • Shared Washroom</p>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="container py-5">
-        <h2 class="section-title">Gallery</h2>
-
-        <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-                <div class="carousel-item">
-                    <img src="my-images/cooridoor-1.jpeg" class="d-block w-100"
-                    alt="Indraprastha Holiday Homes interior">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/room-1/1.jpeg" class="d-block w-100"
-                    alt="Holiday home rooms in Aaravi Maharashtra">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/corridor-2.jpeg" class="d-block w-100"
-                    alt="Indraprastha Holiday Homes interior">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/room-2/1.jpeg" class="d-block w-100"
-                    alt="Holiday home rooms in Aaravi Maharashtra">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/corridor-3.jpeg" class="d-block w-100"
-                    alt="Indraprastha Holiday Homes interior">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/room-3/1.jpeg" class="d-block w-100"
-                    alt="Holiday home rooms in Aaravi Maharashtra">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/room-4/1.jpeg" class="d-block w-100"
-                    alt="Indraprastha Holiday Homes interior">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/room-2/r.jpeg" class="d-block w-100"
-                    alt="Holiday home rooms in Aaravi Maharashtra">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/room-3/2.jpeg" class="d-block w-100"
-                    alt="Indraprastha Holiday Homes interior">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="my-images/room-4/1.jpeg" class="d-block w-100"
-                    alt="Holiday home rooms in Aaravi Maharashtra"
-                    >
-                </div>
-
-                <div class="carousel-item active">
-                    <video class="d-block w-100" controls>
-                        <source src="my-images/room-4/r4-video.mp4">
-                    </video>
-                </div>
-
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm">
+            <img src="my-images/room-3/1.jpeg" alt="Standard Room" />
+            <div class="card-body">
+              <h5 class="card-title">Standard Non-AC Room</h5>
+              <p class="small mb-0">
+                Spacious and naturally ventilated rooms for a traditional
+                coastal experience.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-
-    <!-- GOOGLE MAP + REVIEWS -->
-    <section class="container py-5" id="map">
-        <h2 class="section-title">Location & Social Media Page</h2>
-
-        <div class="row">
-            <div class="col-md-6">
-                <h5>Indraprastha Holiday Homes Location – Google Maps</h5>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.53275230196118!2d72.99649752872045!3d18.093821387660675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be84b762a8ce645%3A0x4081ddae7a639432!2sINDRAPRASTHA%20HOLIDAY%20HOMES!5e0!3m2!1sen!2sin!4v1778736800058!5m2!1sen!2sin" 
-                        width="600" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+    <!-- CONTACT / MAP -->
+    <section id="contact" class="section-bg-beige py-5">
+      <div class="container">
+        <h2 class="text-center section-title">Visit Us</h2>
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <div
+              class="rounded shadow overflow-hidden"
+              style="border: 2px solid var(--gold-primary)"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.53275230196118!2d72.99649752872045!3d18.093821387660675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be84b762a8ce645%3A0x4081ddae7a639432!2sINDRAPRASTHA%20HOLIDAY%20HOMES!5e0!3m2!1sen!2sin!4v1778736800058!5m2!1sen!2sin"
+                width="100%"
+                height="350"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
             </div>
-
-            <div class="col-md-6">
-                <h5>Instagram Page</h5>
-
-                <blockquote class="instagram-media" data-instgrm-captioned
-                    data-instgrm-permalink="https://www.instagram.com/p/DQ-3tiQDAup/?utm_source=ig_embed&amp;utm_campaign=loading"
-                    data-instgrm-version="14"
-                    style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                    <div style="padding:16px;"> <a
-                            href="https://www.instagram.com/p/DQ-3tiQDAup/?utm_source=ig_embed&amp;utm_campaign=loading"
-                            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
-                            target="_blank">
-                            <div style=" display: flex; flex-direction: row; align-items: center;">
-                                <div
-                                    style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
-                                </div>
-                                <div
-                                    style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                                    <div
-                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
-                                    </div>
-                                    <div
-                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="padding: 19% 0;"></div>
-                            <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px"
-                                    height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
-                                    xmlns:xlink="https://www.w3.org/1999/xlink">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                                            <g>
-                                                <path
-                                                    d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
-                                                </path>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></div>
-                            <div style="padding-top: 8px;">
-                                <div
-                                    style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
-                                    View this post on Instagram</div>
-                            </div>
-                            <div style="padding: 12.5% 0;"></div>
-                            <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
-                                <div>
-                                    <div
-                                        style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
-                                    </div>
-                                    <div
-                                        style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
-                                    </div>
-                                    <div
-                                        style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
-                                    </div>
-                                </div>
-                                <div style="margin-left: 8px;">
-                                    <div
-                                        style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
-                                    </div>
-                                    <div
-                                        style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
-                                    </div>
-                                </div>
-                                <div style="margin-left: auto;">
-                                    <div
-                                        style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
-                                    </div>
-                                    <div
-                                        style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
-                                    </div>
-                                    <div
-                                        style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
-                                <div
-                                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
-                                </div>
-                                <div
-                                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
-                                </div>
-                            </div>
-                        </a>
-                        <p
-                            style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-                            <a href="https://www.instagram.com/p/DQ-3tiQDAup/?utm_source=ig_embed&amp;utm_campaign=loading"
-                                style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                                target="_blank">A post shared by INDRAPRASTHA HOLIDAY HOMES
-                                (@indraprastha_holiday_homes)</a>
-                        </p>
-                    </div>
-                </blockquote>
-                <script async src="//www.instagram.com/embed.js"></script>
-
+          </div>
+          <div class="col-md-6">
+            <div
+              class="p-4 bg-white rounded shadow-sm border-start border-gold border-4"
+            >
+              <h4 class="fw-bold mb-3" style="color: var(--gold-dark)">
+                Get In Touch
+              </h4>
+              <p>
+                <i class="bi bi-geo-alt-fill me-2 text-gold"></i> Near Hanuman
+                Temple, Aaravi, Shrivardhan, Raigad.
+              </p>
+              <p>
+                <i class="bi bi-telephone-fill me-2 text-gold"></i> +91 88791
+                48416
+              </p>
+              <hr />
+              <a
+                href="https://wa.me/918879148416"
+                class="btn btn-gold w-100 mb-2"
+                >WhatsApp for Booking</a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="container text-center py-5">
-        <h2 class="section-title">Contact Us</h2>
+    <!-- MOBILE STICKY BAR -->
+    <div class="mobile-action-bar">
+      <a href="tel:+918879148416" class="btn btn-gold flex-grow-1"
+        ><i class="bi bi-telephone-fill me-2"></i>Call</a
+      >
+      <a
+        href="https://wa.me/918879148416"
+        class="btn btn-outline-dark flex-grow-1"
+        style="border-color: var(--gold-primary)"
+        ><i class="bi bi-whatsapp me-2"></i>Chat</a
+      >
+    </div>
 
-        <p><b>Address:</b> Indraprastha Holiday Homes, Near Hanuman Temple,
-At Po Aaravi, Tal. Shrivardhan, Dist. Raigad, Maharashtra 402113</p>
-
-        <a href="tel:+918879148416" class="btn btn-primary btn-lg m-2">
-            <i class="bi bi-telephone-fill"></i> Call Now +918879148416
-        </a>
-
-        <a href="https://wa.me/918879148416" class="btn btn-success btn-lg m-2" target="_blank">
-            <i class="bi bi-whatsapp"></i> WhatsApp +918879148416
-        </a>
-    </section>
-
-   
-       <footer>© 2025 Indraprastha Holiday Homes |
-Near Hanuman Temple, At Po Aaravi, Tal. Shrivardhan, Dist. Raigad, Maharashtra 402113
-</footer>
-
-    
+    <!-- FOOTER -->
+    <footer>
+      <div class="container text-center">
+        <h4 class="fw-bold mb-3">Indraprastha Holiday Homes</h4>
+        <p class="small mb-4">A tradition of coastal excellence.</p>
+        <div class="mb-3">
+          <i class="bi bi-facebook mx-2 fs-4"></i>
+          <i class="bi bi-instagram mx-2 fs-4"></i>
+          <i class="bi bi-google mx-2 fs-4"></i>
+        </div>
+        <p class="small text-white-50">
+          © 2026 Indraprastha Holiday Homes | All Rights Reserved
+        </p>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
+  </body>
 </html>

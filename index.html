@@ -1,412 +1,1230 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Indraprastha Holiday Homes | Best Stay Near Aaravi Beach</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indraprastha Holiday Homes | Aaravi Beach, Shrivardhan</title>
+<meta name="description" content="A coastal holiday home near Aaravi Beach, Shrivardhan. Deluxe AC suites & breezy non-AC rooms, two minutes from the sand.">
 
-    <!-- Bootstrap & Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <style>
-      :root {
-        --beige-bg: #f5f2ed; /* Soft Beige */
-        --gold-primary: #d4af37; /* Metallic Gold */
-        --gold-dark: #b8860b; /* Deep Gold */
-        --white: #ffffff;
-        --dark-text: #4a4031; /* Deep Bronze/Brown for text */
-      }
+<style>
+  :root{
+    --sea-deep:#0b3d3a;
+    --sea-deeper:#082b29;
+    --sun:#e8a33d;
+    --sun-soft:#f0c170;
+    --sand:#f3e6d0;
+    --foam:#fbf8f2;
+    --coral:#e2654a;
+    --ink:#142420;
+    --ink-soft:#3c5450;
 
-      body {
-        background-color: var(--white);
-        color: var(--dark-text);
-        font-family: "Georgia", serif; /* Elegant serif font */
-      }
+    --serif: "Fraunces", serif;
+    --sans: "Outfit", sans-serif;
+    --mono: "JetBrains Mono", monospace;
+  }
 
-      /* NAVBAR */
-      .navbar {
-        background-color: var(--white) !important;
-        border-bottom: 3px solid var(--gold-primary);
-      }
-      .navbar-brand,
-      .nav-link {
-        color: var(--dark-text) !important;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-      .nav-link:hover {
-        color: var(--gold-primary) !important;
-      }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
 
-      /* HERO SECTION */
-      .hero {
-        background:
-          linear-gradient(rgba(74, 64, 49, 0.4), rgba(74, 64, 49, 0.4)),
-          url("my-images/aaravi-beach-maharashtra.jpg") center/cover no-repeat;
-        min-height: 65vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        text-align: center;
-        padding: 60px 20px;
-      }
-      .hero h1 {
-        font-size: calc(2rem + 1.5vw);
-        font-weight: 700;
-        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
-      }
+  body{
+    background:var(--foam);
+    color:var(--ink);
+    font-family:var(--sans);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
 
-      /* BUTTONS */
-      .btn-gold {
-        background-color: var(--gold-primary);
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: 0.3s;
-        border-radius: 5px;
-      }
-      .btn-gold:hover {
-        background-color: var(--gold-dark);
-        color: white;
-        transform: translateY(-2px);
-      }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
 
-      /* SECTION STYLING */
-      .section-bg-beige {
-        background-color: var(--beige-bg);
-      }
-      .section-title {
-        color: var(--gold-dark);
-        font-weight: 700;
-        position: relative;
-        padding-bottom: 10px;
-        margin-bottom: 40px;
-      }
-      .section-title::after {
-        content: "";
-        width: 60px;
-        height: 3px;
-        background: var(--gold-primary);
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  ::selection{background:var(--sun-soft); color:var(--ink);}
 
-      /* AMENITIES */
-      .amenity-box {
-        background: var(--white);
-        border: 1px solid #e0d8cc;
-        border-radius: 8px;
-        padding: 25px 15px;
-        text-align: center;
-        height: 100%;
-        transition: 0.3s;
-      }
-      .amenity-box:hover {
-        border-color: var(--gold-primary);
-        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
-      }
-      .amenity-box i {
-        color: var(--gold-primary);
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        display: block;
-      }
+  :focus-visible{
+    outline:3px solid var(--coral);
+    outline-offset:3px;
+    border-radius:4px;
+  }
 
-      /* ROOM CARDS */
-      .card {
-        border: none;
-        border-radius: 0;
-        background-color: var(--white);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      }
-      .card-body {
-        border-top: 4px solid var(--gold-primary);
-        padding: 20px;
-      }
-      .card-title {
-        color: var(--gold-dark);
-        font-weight: 700;
-      }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--coral);
+    display:inline-flex;
+    align-items:center;
+    gap:0.55em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px; height:1px;
+    background:var(--coral);
+    display:inline-block;
+  }
 
-      /* IMAGES/VIDEOS */
-      .carousel-item img,
-      .carousel-item video {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        object-fit: cover;
-      }
+  h1,h2,h3,h4{
+    font-family:var(--serif);
+    font-weight:600;
+    line-height:1.08;
+    letter-spacing:-0.01em;
+  }
 
-      /* STICKY FOOTER MOBILE */
-      .mobile-action-bar {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        display: none;
-        z-index: 1000;
-        background: var(--white);
-        padding: 10px;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        border-top: 2px solid var(--gold-primary);
-      }
+  /* ============ NAV ============ */
+  .nav{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 5vw;
+    transition:background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+  }
+  .nav.scrolled{
+    background:rgba(11,61,58,0.92);
+    backdrop-filter:blur(10px);
+    padding:14px 5vw;
+    box-shadow:0 8px 30px rgba(0,0,0,0.15);
+  }
+  .nav-logo{
+    font-family:var(--serif);
+    font-size:1.25rem;
+    color:var(--foam);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+  }
+  .nav-logo .mark{
+    width:30px; height:30px;
+    position:relative;
+    flex-shrink:0;
+  }
+  .nav-links{
+    display:flex;
+    gap:2.2rem;
+    list-style:none;
+    font-size:0.92rem;
+    color:var(--sand);
+  }
+  .nav-links a{
+    position:relative;
+    padding-bottom:4px;
+    transition:color 0.25s ease;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0; bottom:0;
+    width:0; height:1.5px;
+    background:var(--sun);
+    transition:width 0.3s ease;
+  }
+  .nav-links a:hover{color:var(--sun-soft);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    letter-spacing:0.05em;
+    color:var(--ink);
+    background:var(--sun);
+    padding:10px 20px;
+    border-radius:30px;
+    transition:transform 0.25s ease, background 0.25s ease;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--sun-soft); transform:translateY(-2px);}
+  .nav-toggle{display:none;}
 
-      footer {
-        background-color: var(--dark-text);
-        color: var(--beige-bg);
-        padding: 50px 20px 100px 20px;
-      }
+  @media (max-width:880px){
+    .nav-links{
+      position:fixed;
+      top:0; right:0;
+      height:100vh;
+      width:min(78vw, 320px);
+      background:var(--sea-deeper);
+      flex-direction:column;
+      justify-content:center;
+      gap:2rem;
+      padding:2rem;
+      transform:translateX(100%);
+      transition:transform 0.4s ease;
+      font-size:1.1rem;
+    }
+    .nav-links.open{transform:translateX(0);}
+    .nav-toggle{
+      display:flex;
+      flex-direction:column;
+      gap:5px;
+      background:none;
+      border:none;
+      cursor:pointer;
+      z-index:200;
+      padding:8px;
+    }
+    .nav-toggle span{
+      width:24px; height:2px;
+      background:var(--foam);
+      transition:0.3s ease;
+    }
+    .nav-cta{display:none;}
+    .nav-links .nav-cta-mobile{
+      display:inline-block;
+      font-family:var(--mono);
+      background:var(--sun);
+      color:var(--ink);
+      padding:12px 24px;
+      border-radius:30px;
+      font-size:0.85rem;
+    }
+  }
 
-      /* RESPONSIVE FIXES */
-      @media (max-width: 768px) {
-        .mobile-action-bar {
-          display: flex;
-          gap: 10px;
-        }
-        .hero {
-          min-height: 50vh;
-        }
-        .row.g-3 > div {
-          width: 50%;
-        } /* 2 per row on mobile */
-      }
-    </style>
-  </head>
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    height:100vh;
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(180deg, #1a5450 0%, var(--sea-deep) 55%, var(--sea-deeper) 100%);
+  }
 
-  <body>
-    <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <span
-            style="color: var(--gold-primary); font-size: 1.5rem"
-            class="me-2"
-            >✦</span
-          >
-          Indraprastha
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-        >
-          <i class="bi bi-list" style="color: var(--gold-primary)"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto text-center">
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#rooms" class="nav-link">Rooms</a>
-            </li>
-            <li class="nav-item">
-              <a href="#amenities" class="nav-link">Amenities</a>
-            </li>
-            <li class="nav-item">
-              <a href="#gallery" class="nav-link">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
+  .sun-arc-wrap{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .sun{
+    position:absolute;
+    width:140px; height:140px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #fff6df, var(--sun) 60%, var(--coral) 100%);
+    box-shadow:0 0 90px 30px rgba(232,163,61,0.55);
+    top:14%;
+    left:50%;
+    transform:translateX(-50%);
+    animation:sunFloat 9s ease-in-out infinite;
+  }
+  @keyframes sunFloat{
+    0%,100%{transform:translateX(-50%) translateY(0);}
+    50%{transform:translateX(-50%) translateY(-16px);}
+  }
+
+  .stars{
+    position:absolute; inset:0;
+    background-image:
+      radial-gradient(2px 2px at 20% 20%, rgba(255,255,255,0.5), transparent),
+      radial-gradient(1.5px 1.5px at 75% 15%, rgba(255,255,255,0.4), transparent),
+      radial-gradient(1.5px 1.5px at 60% 35%, rgba(255,255,255,0.3), transparent),
+      radial-gradient(2px 2px at 90% 10%, rgba(255,255,255,0.4), transparent),
+      radial-gradient(1px 1px at 35% 8%, rgba(255,255,255,0.5), transparent);
+    opacity:0.6;
+  }
+
+  .wave-layer{
+    position:absolute;
+    left:-10%;
+    width:120%;
+    bottom:0;
+  }
+  .wave-layer svg{width:100%; display:block;}
+  .wave1{ animation: waveDrift 22s linear infinite; opacity:0.55; bottom:90px;}
+  .wave2{ animation: waveDrift 16s linear infinite reverse; opacity:0.75; bottom:40px;}
+  .wave3{ animation: waveDrift 12s linear infinite; opacity:1; bottom:0;}
+  @keyframes waveDrift{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50px);}
+  }
+
+  .palm{
+    position:absolute;
+    bottom:60px;
+    opacity:0.85;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    animation:sway 6s ease-in-out infinite;
+    transform-origin:bottom center;
+  }
+  .palm--left{left:2%; width:120px; animation-delay:0s;}
+  .palm--right{right:2%; width:90px; animation-delay:1.2s; transform:scaleX(-1);}
+  @keyframes sway{
+    0%,100%{rotate:0deg;}
+    50%{rotate:2deg;}
+  }
+  @media (max-width:700px){ .palm{display:none;} }
+
+  .hero-content{
+    position:relative;
+    z-index:5;
+    width:100%;
+    padding:0 6vw;
+    margin-top:30px;
+    color:var(--foam);
+  }
+  .hero-content .eyebrow{color:var(--sun-soft);}
+  .hero-content .eyebrow::before{background:var(--sun-soft);}
+
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 5.4rem);
+    margin:0.4em 0 0.3em;
+    max-width:14ch;
+    color:var(--foam);
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--sun-soft);
+    font-weight:400;
+  }
+  .hero-sub{
+    font-size:clamp(1rem, 1.6vw, 1.25rem);
+    color:var(--sand);
+    max-width:46ch;
+    margin-bottom:2.2rem;
+    line-height:1.6;
+  }
+  .hero-actions{
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.6em;
+    padding:16px 30px;
+    border-radius:40px;
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.98rem;
+    transition:transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease, background 0.3s ease;
+    cursor:pointer;
+    border:none;
+  }
+  .btn--primary{
+    background:var(--coral);
+    color:var(--foam);
+    box-shadow:0 10px 30px rgba(226,101,74,0.4);
+  }
+  .btn--primary:hover{transform:translateY(-3px) scale(1.02); box-shadow:0 14px 36px rgba(226,101,74,0.55);}
+  .btn--ghost{
+    background:transparent;
+    color:var(--foam);
+    border:1.5px solid rgba(251,248,242,0.5);
+  }
+  .btn--ghost:hover{background:rgba(251,248,242,0.12); transform:translateY(-3px);}
+
+  .hero-tide{
+    position:absolute;
+    bottom:18px;
+    left:6vw;
+    z-index:5;
+    color:var(--sand);
+    font-family:var(--mono);
+    font-size:0.7rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    opacity:0.8;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .hero-tide .dot{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--sun-soft);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:0.4;} 50%{opacity:1;}}
+  @media (max-width:700px){ .hero-tide{display:none;} }
+
+  .scroll-cue{
+    position:absolute;
+    bottom:22px; right:6vw;
+    z-index:5;
+    color:var(--sand);
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    opacity:0.85;
+  }
+  .scroll-cue .line{
+    width:1px; height:34px;
+    background:linear-gradient(to bottom, var(--sand), transparent);
+    animation:scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine{0%{transform:scaleY(0); transform-origin:top;} 50%{transform:scaleY(1); transform-origin:top;} 51%{transform-origin:bottom;} 100%{transform:scaleY(0); transform-origin:bottom;}}
+  @media (max-width:700px){ .scroll-cue{display:none;} }
+
+  /* ============ COASTLINE DIVIDER (signature) ============ */
+  .coastline{
+    position:relative;
+    height:90px;
+    background:var(--foam);
+    overflow:hidden;
+  }
+  .coastline svg{
+    position:absolute;
+    top:-1px; left:0;
+    width:100%; height:100%;
+  }
+  .coastline .tag{
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    background:var(--foam);
+    padding:6px 18px;
+    border:1px solid rgba(20,36,32,0.15);
+    border-radius:30px;
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  /* ============ SECTION SHELL ============ */
+  section{
+    padding:7rem 6vw;
+    position:relative;
+  }
+  .section-head{
+    max-width:680px;
+    margin-bottom:3.2rem;
+  }
+  .section-head h2{
+    font-size:clamp(2rem, 4vw, 3.1rem);
+    margin-top:0.5em;
+  }
+  .section-head p{
+    margin-top:1rem;
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+    max-width:54ch;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(36px);
+    transition:opacity 0.9s cubic-bezier(.2,.7,.2,1), transform 0.9s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ============ ABOUT ============ */
+  .about{
+    background:var(--foam);
+  }
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:4rem;
+    align-items:center;
+  }
+  @media (max-width:900px){ .about-grid{grid-template-columns:1fr; gap:2.5rem;} }
+
+  .about-text p{
+    font-size:1.08rem;
+    line-height:1.85;
+    color:var(--ink-soft);
+    margin-bottom:1.3rem;
+  }
+  .about-text strong{color:var(--ink); font-weight:600;}
+
+  .stat-row{
+    display:flex;
+    gap:2.5rem;
+    margin-top:2.2rem;
+    flex-wrap:wrap;
+  }
+  .stat b{
+    font-family:var(--serif);
+    font-size:2.1rem;
+    color:var(--sea-deep);
+    display:block;
+  }
+  .stat span{
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .about-visual{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -20px rgba(11,61,58,0.35);
+    transform:perspective(1000px) rotateY(-4deg) rotateX(2deg);
+    transition:transform 0.5s ease;
+  }
+  .about-visual:hover{transform:perspective(1000px) rotateY(0deg) rotateX(0deg);}
+  .about-visual img{
+    width:100%; height:100%; object-fit:cover;
+  }
+  .about-visual::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(200deg, rgba(11,61,58,0.05), rgba(11,61,58,0.45));
+  }
+  .about-badge{
+    position:absolute;
+    bottom:18px; left:18px;
+    z-index:2;
+    background:rgba(251,248,242,0.95);
+    backdrop-filter:blur(6px);
+    padding:14px 18px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 10px 24px rgba(0,0,0,0.2);
+  }
+  .about-badge .ico{font-size:1.4rem;}
+  .about-badge b{display:block; font-family:var(--serif); font-size:0.95rem; color:var(--ink);}
+  .about-badge span{font-size:0.72rem; color:var(--ink-soft);}
+
+  /* ============ AMENITIES ============ */
+  .amenities{
+    background:var(--sea-deep);
+    color:var(--foam);
+    position:relative;
+    overflow:hidden;
+  }
+  .amenities::before{
+    content:"";
+    position:absolute;
+    top:-40%; right:-10%;
+    width:60vw; height:60vw;
+    background:radial-gradient(circle, rgba(232,163,61,0.12), transparent 70%);
+    pointer-events:none;
+  }
+  .amenities .section-head p{color:var(--sand);}
+  .amenities .eyebrow{color:var(--sun-soft);}
+  .amenities .eyebrow::before{background:var(--sun-soft);}
+
+  .amenity-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.4rem;
+  }
+  @media (max-width:880px){ .amenity-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:520px){ .amenity-grid{grid-template-columns:1fr;} }
+
+  .amenity-card{
+    background:rgba(251,248,242,0.06);
+    border:1px solid rgba(251,248,242,0.14);
+    border-radius:18px;
+    padding:2rem 1.6rem;
+    transition:transform 0.4s cubic-bezier(.2,.8,.2,1), background 0.4s ease, border-color 0.4s ease;
+  }
+  .amenity-card:hover{
+    transform:translateY(-8px);
+    background:rgba(251,248,242,0.1);
+    border-color:rgba(232,163,61,0.5);
+  }
+  .amenity-icon{
+    width:48px; height:48px;
+    margin-bottom:1.2rem;
+    color:var(--sun-soft);
+  }
+  .amenity-icon svg{width:100%; height:100%;}
+  .amenity-card h4{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:1.05rem;
+    margin-bottom:0.4rem;
+    color:var(--foam);
+  }
+  .amenity-card p{
+    font-size:0.88rem;
+    color:var(--sand);
+    opacity:0.75;
+    line-height:1.55;
+  }
+
+  /* ============ ROOMS ============ */
+  .rooms{background:var(--foam);}
+  .room-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:2.2rem;
+  }
+  @media (max-width:880px){ .room-grid{grid-template-columns:1fr;} }
+
+  .room-card{
+    position:relative;
+    border-radius:24px;
+    overflow:hidden;
+    background:var(--ink);
+    aspect-ratio:4/5;
+    cursor:pointer;
+    transform-style:preserve-3d;
+    transition:transform 0.5s cubic-bezier(.2,.8,.2,1), box-shadow 0.5s ease;
+    box-shadow:0 20px 40px -16px rgba(20,36,32,0.3);
+  }
+  .room-card:hover{
+    box-shadow:0 30px 60px -16px rgba(20,36,32,0.45);
+  }
+  .room-img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform 0.7s cubic-bezier(.2,.8,.2,1), filter 0.5s ease;
+  }
+  .room-card:hover .room-img{transform:scale(1.08);}
+  .room-overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,61,58,0) 30%, rgba(8,30,28,0.92) 100%);
+  }
+  .room-tag{
+    position:absolute;
+    top:20px; left:20px;
+    font-family:var(--mono);
+    font-size:0.66rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    background:rgba(251,248,242,0.92);
+    color:var(--ink);
+    padding:6px 14px;
+    border-radius:30px;
+  }
+  .room-tag--gold{background:var(--sun); color:var(--ink);}
+  .room-info{
+    position:absolute;
+    bottom:0; left:0; right:0;
+    padding:2rem;
+    color:var(--foam);
+  }
+  .room-info h3{
+    font-size:1.7rem;
+    margin-bottom:0.5rem;
+  }
+  .room-info p{
+    font-size:0.95rem;
+    color:var(--sand);
+    line-height:1.6;
+    max-width:32ch;
+    margin-bottom:1rem;
+  }
+  .room-feats{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .room-feats span{
+    font-family:var(--mono);
+    font-size:0.66rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    border:1px solid rgba(251,248,242,0.35);
+    padding:5px 10px;
+    border-radius:20px;
+    color:var(--sand);
+  }
+
+  /* ============ GALLERY ============ */
+  .gallery{background:var(--sand);}
+  .gallery-track-wrap{
+    overflow:hidden;
+    margin:0 -6vw;
+    padding:0 6vw;
+  }
+  .gallery-track{
+    display:flex;
+    gap:1.4rem;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding-bottom:1rem;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+    scrollbar-color:var(--sea-deep) transparent;
+  }
+  .gallery-track::-webkit-scrollbar{height:6px;}
+  .gallery-track::-webkit-scrollbar-thumb{background:var(--sea-deep); border-radius:10px;}
+
+  .gallery-item{
+    flex:0 0 auto;
+    width:300px;
+    aspect-ratio:3/4;
+    border-radius:18px;
+    overflow:hidden;
+    scroll-snap-align:start;
+    position:relative;
+    box-shadow:0 16px 32px -10px rgba(20,36,32,0.25);
+    transition:transform 0.4s ease;
+  }
+  .gallery-item:nth-child(even){
+    transform:translateY(18px);
+  }
+  .gallery-item img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform 0.6s ease;
+  }
+  .gallery-item:hover img{transform:scale(1.06);}
+  @media (max-width:600px){
+    .gallery-item{width:78vw;}
+    .gallery-item:nth-child(even){transform:translateY(0);}
+  }
+
+  /* ============ MAP/VISIT ============ */
+  .visit{background:var(--foam);}
+  .visit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+    align-items:stretch;
+  }
+  @media (max-width:880px){ .visit-grid{grid-template-columns:1fr;} }
+  .map-frame{
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 24px 50px -18px rgba(20,36,32,0.3);
+    border:6px solid var(--foam);
+    outline:1px solid rgba(20,36,32,0.1);
+    min-height:380px;
+  }
+  .map-frame iframe{width:100%; height:100%; min-height:380px; border:0; display:block;}
+
+  .visit-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:1.6rem;
+  }
+  .info-row{
+    display:flex;
+    gap:1.1rem;
+    align-items:flex-start;
+  }
+  .info-row .ico{
+    width:42px; height:42px;
+    border-radius:50%;
+    background:var(--sand);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    color:var(--sea-deep);
+  }
+  .info-row h4{
+    font-family:var(--sans); font-weight:600; font-size:1rem; margin-bottom:2px;
+  }
+  .info-row p, .info-row a{
+    color:var(--ink-soft); font-size:0.95rem; line-height:1.5;
+  }
+  .info-row a:hover{color:var(--coral);}
+
+  /* ============ CONTACT / CTA ============ */
+  .cta-section{
+    background:linear-gradient(160deg, var(--sea-deep), var(--sea-deeper));
+    color:var(--foam);
+    text-align:center;
+    padding:7rem 6vw;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-section .sun{position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:200px; height:200px; opacity:0.8;}
+  .cta-content{position:relative; z-index:2;}
+  .cta-section .eyebrow{color:var(--sun-soft); justify-content:center;}
+  .cta-section .eyebrow::before{display:none;}
+  .cta-section h2{
+    font-size:clamp(2.2rem, 5vw, 3.6rem);
+    margin:0.5em 0 0.6em;
+  }
+  .cta-section p{
+    color:var(--sand);
+    max-width:46ch;
+    margin:0 auto 2.2rem;
+    font-size:1.05rem;
+    line-height:1.7;
+  }
+  .cta-actions{
+    display:flex;
+    gap:1rem;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--ink);
+    color:var(--sand);
+    padding:3.5rem 6vw 2rem;
+  }
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:2rem;
+    padding-bottom:2rem;
+    border-bottom:1px solid rgba(251,248,242,0.12);
+  }
+  .footer-brand{
+    font-family:var(--serif);
+    font-size:1.4rem;
+    color:var(--foam);
+    margin-bottom:0.5rem;
+  }
+  .footer-brand-sub{
+    font-size:0.85rem;
+    color:var(--sand);
+    opacity:0.65;
+    max-width:30ch;
+  }
+  .footer-links{
+    display:flex;
+    gap:3rem;
+    flex-wrap:wrap;
+  }
+  .footer-col h5{
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--sun-soft);
+    margin-bottom:0.9rem;
+  }
+  .footer-col a, .footer-col p{
+    display:block;
+    font-size:0.88rem;
+    color:var(--sand);
+    opacity:0.8;
+    margin-bottom:0.55rem;
+  }
+  .footer-col a:hover{color:var(--sun-soft); opacity:1;}
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:0.8rem;
+    padding-top:1.6rem;
+    font-size:0.78rem;
+    opacity:0.55;
+  }
+
+  /* ============ FLOATING WHATSAPP ============ */
+  .float-actions{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    z-index:90;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-end;
+  }
+  .fab{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--coral);
+    color:var(--foam);
+    padding:14px 20px;
+    border-radius:50px;
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.88rem;
+    box-shadow:0 12px 28px rgba(226,101,74,0.4);
+    transition:transform 0.3s cubic-bezier(.2,.8,.2,1);
+  }
+  .fab:hover{transform:translateY(-3px) scale(1.03);}
+  .fab--wa{background:#2bab4e; box-shadow:0 12px 28px rgba(43,171,78,0.4);}
+  .fab svg{width:18px; height:18px; flex-shrink:0;}
+  @media (max-width:600px){
+    .fab span{display:none;}
+    .fab{padding:14px; border-radius:50%;}
+  }
+
+  /* lightbox */
+  .lightbox{
+    position:fixed; inset:0;
+    background:rgba(8,20,18,0.92);
+    z-index:200;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:5vw;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{
+    max-width:90vw; max-height:86vh;
+    border-radius:12px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.5);
+  }
+  .lightbox-close{
+    position:absolute;
+    top:24px; right:5vw;
+    color:var(--foam);
+    font-size:1.8rem;
+    cursor:pointer;
+    background:none; border:none;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    <svg class="mark" viewBox="0 0 40 40" fill="none">
+      <circle cx="20" cy="14" r="8" fill="#e8a33d"/>
+      <path d="M2 28C8 24 14 24 20 28C26 32 32 32 38 28" stroke="#fbf8f2" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M2 33C8 29 14 29 20 33C26 37 32 37 38 33" stroke="#fbf8f2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    </svg>
+    Indraprastha
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="tel:+918879148416" class="nav-cta-mobile">Call Now</a></li>
+  </ul>
+  <a href="tel:+918879148416" class="nav-cta">Check Availability</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="sun-arc-wrap">
+    <div class="stars"></div>
+    <div class="sun"></div>
+    <img class="palm palm--left" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 160'%3E%3Cpath d='M50 160 L52 70' stroke='%23062420' stroke-width='5' fill='none'/%3E%3Cg fill='%230f3b35'%3E%3Cpath d='M52 75 C20 65 5 40 2 20 C30 30 48 50 52 75Z'/%3E%3Cpath d='M52 75 C25 55 20 25 28 5 C45 25 50 55 52 75Z'/%3E%3Cpath d='M52 75 C50 45 60 18 80 5 C82 35 65 60 52 75Z'/%3E%3Cpath d='M52 75 C70 60 95 50 98 25 C75 30 55 50 52 75Z'/%3E%3Cpath d='M52 75 C45 50 55 25 50 2 C35 20 42 55 52 75Z'/%3E%3C/g%3E%3C/svg%3E" alt="">
+    <img class="palm palm--right" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 160'%3E%3Cpath d='M50 160 L52 70' stroke='%23062420' stroke-width='5' fill='none'/%3E%3Cg fill='%230f3b35'%3E%3Cpath d='M52 75 C20 65 5 40 2 20 C30 30 48 50 52 75Z'/%3E%3Cpath d='M52 75 C25 55 20 25 28 5 C45 25 50 55 52 75Z'/%3E%3Cpath d='M52 75 C50 45 60 18 80 5 C82 35 65 60 52 75Z'/%3E%3Cpath d='M52 75 C70 60 95 50 98 25 C75 30 55 50 52 75Z'/%3E%3Cpath d='M52 75 C45 50 55 25 50 2 C35 20 42 55 52 75Z'/%3E%3C/g%3E%3C/svg%3E" alt="">
+
+    <div class="wave-layer wave1">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="#0e463f"/></svg>
+    </div>
+    <div class="wave-layer wave2">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,50 C240,10 480,90 720,50 C960,10 1200,90 1440,50 L1440,120 L0,120 Z" fill="#0a3633"/></svg>
+    </div>
+    <div class="wave-layer wave3">
+      <svg viewBox="0 0 1440 140" preserveAspectRatio="none"><path d="M0,70 C240,110 480,30 720,70 C960,110 1200,30 1440,70 L1440,140 L0,140 Z" fill="#082b29"/></svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <span class="eyebrow">Aaravi Beach · Shrivardhan · Raigad</span>
+    <h1>Wake up two minutes <em>from the tide.</em></h1>
+    <p class="hero-sub">A family-run holiday home tucked beside Hanuman Temple in Aaravi village — golden hospitality, sea breeze through every window, and the Konkan coast right at the doorstep.</p>
+    <div class="hero-actions">
+      <a href="tel:+918879148416" class="btn btn--primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Check Availability
+      </a>
+      <a href="#rooms" class="btn btn--ghost">See the Rooms</a>
+    </div>
+  </div>
+
+  <div class="hero-tide"><span class="dot"></span> Live tide · Aaravi Beach, 350m away</div>
+  <div class="scroll-cue">Scroll<div class="line"></div></div>
+</header>
+
+<div class="coastline">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path d="M0,40 C200,10 400,70 720,40 C1040,10 1240,70 1440,40 L1440,0 L0,0 Z" fill="#082b29"/>
+  </svg>
+  <span class="tag">18.0938° N · 72.9965° E</span>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <span class="eyebrow">Experience Serenity</span>
+      <h2 style="margin-top:0.5em; font-size:clamp(1.9rem,3.6vw,2.8rem);">Modern comfort, <br>traditional warmth.</h2>
+      <p>Nestled in the heart of <strong>Aaravi Village</strong>, Indraprastha Holiday Homes blends easy modern comfort with the kind of hospitality that's passed down, not trained — the sort you get from a host who actually wants you to enjoy your stay.</p>
+      <p>We're a short, easy walk from <strong>Aaravi Beach</strong>, close enough that you can hear the surf from the courtyard, far enough that the village stays quiet at night.</p>
+      <div class="stat-row">
+        <div class="stat"><b>2 min</b><span>Walk to the beach</span></div>
+        <div class="stat"><b>2</b><span>Room types</span></div>
+        <div class="stat"><b>24/7</b><span>Host on call</span></div>
       </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <h1 class="mb-3">Premium Holiday Home Near Aaravi Beach</h1>
-        <p class="lead mb-4" style="color: var(--beige-bg)">
-          Elegance • Nature • Comfort
-        </p>
-        <div class="d-none d-md-block">
-          <a href="tel:+918879148416" class="btn btn-gold px-5"
-            >Check Availability</a
-          >
-        </div>
+    </div>
+    <div class="about-visual reveal">
+      <img src="https://sritikamanjrekar.github.io/INDRAPRASTHA-HOLIDAY-HOMES/my-images/room-4/1.jpeg" alt="Deluxe AC suite interior at Indraprastha Holiday Homes" loading="lazy">
+      <div class="about-badge">
+        <span class="ico">🌊</span>
+        <div><b>Aaravi Beach</b><span>350m from your room</span></div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- ABOUT -->
-    <section id="about" class="container py-5 text-center">
-      <h2 class="section-title">Experience Serenity</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <p class="fs-5">
-            Nestled in the heart of <b>Aaravi Village</b>, Indraprastha Holiday
-            Homes combines modern comfort with a touch of traditional golden
-            hospitality. Located just minutes from the pristine Aaravi Beach.
-          </p>
-        </div>
-      </div>
-    </section>
+<!-- ============ AMENITIES ============ -->
+<section class="amenities" id="amenities">
+  <div class="section-head reveal">
+    <span class="eyebrow">What's Included</span>
+    <h2>Everything a coastal stay <br>should come with.</h2>
+    <p>No surprises at check-in — these are part of every booking, AC or non-AC.</p>
+  </div>
+  <div class="amenity-grid">
 
-    <!-- AMENITIES (Beige Section) -->
-    <section id="amenities" class="section-bg-beige py-5">
-      <div class="container">
-        <h2 class="text-center section-title">Guest Amenities</h2>
-        <div class="row g-3">
-          <div class="col-6 col-md-4">
-            <div class="amenity-box">
-              <i class="bi bi-wifi"></i>
-              <span class="fw-bold">Free Wi-Fi</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <div class="amenity-box">
-              <i class="bi bi-thermometer-sun"></i>
-              <span class="fw-bold">Hot Water</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <div class="amenity-box">
-              <i class="bi bi-shield-check"></i>
-              <span class="fw-bold">CCTV Secure</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <div class="amenity-box">
-              <i class="bi bi-p-circle"></i>
-              <span class="fw-bold">Free Parking</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <div class="amenity-box">
-              <i class="bi bi-lightning"></i>
-              <span class="fw-bold">Power Backup</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4">
-            <div class="amenity-box">
-              <i class="bi bi-cup-hot"></i>
-              <span class="fw-bold">Breakfast</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROOMS -->
-    <section id="rooms" class="container py-5">
-      <h2 class="text-center section-title">Our Accommodations</h2>
-      <div class="row g-4">
-        <div class="col-12 col-md-6">
-          <div class="card shadow-sm">
-            <img src="my-images/room-4/1.jpeg" alt="Deluxe AC Room" />
-            <div class="card-body">
-              <h5 class="card-title">Deluxe AC Suite</h5>
-              <p class="small mb-0">
-                Experience the ultimate comfort with full climate control and
-                premium bedding.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="card shadow-sm">
-            <img src="my-images/room-2/1.jpeg" alt="Standard Room" />
-            <div class="card-body">
-              <h5 class="card-title">Standard Non-AC Room</h5>
-              <p class="small mb-0">
-                Spacious and naturally ventilated rooms for a traditional
-                coastal experience.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / MAP -->
-    <section id="contact" class="section-bg-beige py-5">
-      <div class="container">
-        <h2 class="text-center section-title">Visit Us</h2>
-        <div class="row g-4 align-items-center">
-          <div class="col-md-6">
-            <div
-              class="rounded shadow overflow-hidden"
-              style="border: 2px solid var(--gold-primary)"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.53275230196118!2d72.99649752872045!3d18.093821387660675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be84b762a8ce645%3A0x4081ddae7a639432!2sINDRAPRASTHA%20HOLIDAY%20HOMES!5e0!3m2!1sen!2sin!4v1778736800058!5m2!1sen!2sin"
-                width="100%"
-                height="350"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div
-              class="p-4 bg-white rounded shadow-sm border-start border-gold border-4"
-            >
-              <h4 class="fw-bold mb-3" style="color: var(--gold-dark)">
-                Get In Touch
-              </h4>
-              <p>
-                <i class="bi bi-geo-alt-fill me-2 text-gold"></i> Near Hanuman
-                Temple, Aaravi, Shrivardhan, Raigad.
-              </p>
-              <p>
-                <i class="bi bi-telephone-fill me-2 text-gold"></i> +91 88791
-                48416
-              </p>
-              <hr />
-              <a
-                href="https://wa.me/918879148416"
-                class="btn btn-gold w-100 mb-2"
-                >WhatsApp for Booking</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MOBILE STICKY BAR -->
-    <div class="mobile-action-bar">
-      <a href="tel:+918879148416" class="btn btn-gold flex-grow-1"
-        ><i class="bi bi-telephone-fill me-2"></i>Call</a
-      >
-      <a
-        href="https://wa.me/918879148416"
-        class="btn btn-outline-dark flex-grow-1"
-        style="border-color: var(--gold-primary)"
-        ><i class="bi bi-whatsapp me-2"></i>Chat</a
-      >
+    <div class="amenity-card reveal">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg></div>
+      <h4>Free Wi-Fi</h4>
+      <p>Stay connected on the terrace or beachside if you need to.</p>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="container text-center">
-        <h4 class="fw-bold mb-3">Indraprastha Holiday Homes</h4>
-        <p class="small mb-4">A tradition of coastal excellence.</p>
-        <div class="mb-3">
-          <i class="bi bi-facebook mx-2 fs-4"></i>
-          <i class="bi bi-instagram mx-2 fs-4"></i>
-          <i class="bi bi-google mx-2 fs-4"></i>
-        </div>
-        <p class="small text-white-50">
-          © 2026 Indraprastha Holiday Homes | All Rights Reserved
-        </p>
-      </div>
-    </footer>
+    <div class="amenity-card reveal">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M4 12a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h2M20 12a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1h-2M4 12V8a2 2 0 0 1 2-2h2M20 12V8a2 2 0 0 0-2-2h-2M8 6V4M16 6V4"/></svg></div>
+      <h4>Hot Water</h4>
+      <p>Round-the-clock hot water, even after a salty swim.</p>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <div class="amenity-card reveal">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <h4>CCTV Secure</h4>
+      <p>Monitored common areas so your stay stays worry-free.</p>
+    </div>
+
+    <div class="amenity-card reveal">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 17h2l-1.5-9H4.5L3 17h2M5 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0M5 17h10M9 11V6M9 6h4l2 5"/></svg></div>
+      <h4>Free Parking</h4>
+      <p>On-site parking for cars and bikes, no extra charge.</p>
+    </div>
+
+    <div class="amenity-card reveal">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></div>
+      <h4>Power Backup</h4>
+      <p>Uninterrupted power, so the fans and AC never skip a beat.</p>
+    </div>
+
+    <div class="amenity-card reveal">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11h18l-2 9H5l-2-9ZM3 11a9 6 0 0 1 18 0M12 5V2"/></svg></div>
+      <h4>Breakfast</h4>
+      <p>A simple, home-style Konkani breakfast to start the day.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ROOMS ============ -->
+<section class="rooms" id="rooms">
+  <div class="section-head reveal">
+    <span class="eyebrow">Our Accommodations</span>
+    <h2>Pick your kind <br>of coastal quiet.</h2>
+    <p>Two room types, one easy choice — climate-controlled comfort, or open-window breeze straight off the Konkan coast.</p>
+  </div>
+  <div class="room-grid">
+
+    <div class="room-card reveal" data-tilt>
+      <img class="room-img" src="https://sritikamanjrekar.github.io/INDRAPRASTHA-HOLIDAY-HOMES/my-images/room-4/1.jpeg" alt="Deluxe AC Suite" loading="lazy">
+      <div class="room-overlay"></div>
+      <span class="room-tag room-tag--gold">Most booked</span>
+      <div class="room-info">
+        <h3>Deluxe AC Suite</h3>
+        <p>Full climate control, premium bedding, and a quieter night's sleep after a day at the beach.</p>
+        <div class="room-feats">
+          <span>AC</span><span>Premium bedding</span><span>Hot water</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-card reveal" data-tilt>
+      <img class="room-img" src="https://sritikamanjrekar.github.io/INDRAPRASTHA-HOLIDAY-HOMES/my-images/room-2/1.jpeg" alt="Standard Non-AC Room" loading="lazy">
+      <div class="room-overlay"></div>
+      <span class="room-tag">Sea breeze</span>
+      <div class="room-info">
+        <h3>Standard Non-AC Room</h3>
+        <p>Spacious and naturally ventilated — the traditional coastal way to fall asleep to the surf.</p>
+        <div class="room-feats">
+          <span>Naturally cooled</span><span>Spacious</span><span>Budget-friendly</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="section-head reveal">
+    <span class="eyebrow">Gallery</span>
+    <h2>A look around <br>the property.</h2>
+    <p>Drag sideways for more — best viewed with chai in hand.</p>
+  </div>
+  <div class="gallery-track-wrap">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-item reveal"><img src="https://sritikamanjrekar.github.io/INDRAPRASTHA-HOLIDAY-HOMES/my-images/room-4/1.jpeg" alt="Deluxe AC suite" loading="lazy"></div>
+      <div class="gallery-item reveal"><img src="https://sritikamanjrekar.github.io/INDRAPRASTHA-HOLIDAY-HOMES/my-images/room-2/1.jpeg" alt="Standard room" loading="lazy"></div>
+      <div class="gallery-item reveal"><img src="https://sritikamanjrekar.github.io/INDRAPRASTHA-HOLIDAY-HOMES/my-images/room-4/1.jpeg" alt="Deluxe AC suite detail" loading="lazy"></div>
+      <div class="gallery-item reveal"><img src="https://sritikamanjrekar.github.io/INDRAPRASTHA-HOLIDAY-HOMES/my-images/room-2/1.jpeg" alt="Standard room detail" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT / MAP ============ -->
+<section class="visit" id="visit">
+  <div class="section-head reveal">
+    <span class="eyebrow">Find Us</span>
+    <h2>Near the temple, <br>by the sea.</h2>
+  </div>
+  <div class="visit-grid">
+    <div class="map-frame reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.53275230196118!2d72.99649752872045!3d18.093821387660675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be84b762a8ce645%3A0x4081ddae7a639432!2sINDRAPRASTHA%20HOLIDAY%20HOMES!5e0!3m2!1sen!2sin!4v1778736800058!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Indraprastha Holiday Homes location"></iframe>
+    </div>
+    <div class="visit-info reveal">
+      <div class="info-row">
+        <span class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.94 11A8.94 8.94 0 0 0 13 3.06"/><path d="M3 12a9 9 0 1 0 9-9"/><path d="M12 7v5l3 3"/></svg>
+        </span>
+        <div><h4>Address</h4><p>Near Hanuman Temple, Aaravi, Shrivardhan, Raigad, Maharashtra</p></div>
+      </div>
+      <div class="info-row">
+        <span class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <div><h4>Phone</h4><a href="tel:+918879148416">+91 88791 48416</a></div>
+      </div>
+      <div class="info-row">
+        <span class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+        </span>
+        <div><h4>Getting here</h4><p>2.5 hrs from Mumbai via NH66 / Mangaon route. Closest landmark is Hanuman Temple, Aaravi.</p></div>
+      </div>
+      <a href="tel:+918879148416" class="btn btn--primary" style="align-self:flex-start; margin-top:0.6rem;">Call to Book</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="sun"></div>
+  <div class="cta-content">
+    <span class="eyebrow">Ready When You Are</span>
+    <h2>The Konkan coast<br>is waiting.</h2>
+    <p>Message us on WhatsApp with your dates, or call directly — we usually reply within minutes.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/918879148416" class="btn btn--primary" style="background:#2bab4e; box-shadow:0 10px 30px rgba(43,171,78,0.4);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.74 13.41L3 21l3.7-1.28a8.9 8.9 0 0 0 4.33 1.1h.01a8.94 8.94 0 0 0 6.31-15.3l.25-.2ZM12.06 19.4a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8 1 .94-2.73-.18-.28a7.43 7.43 0 1 1 6.08 3.2Zm4.07-5.56c-.22-.11-1.3-.64-1.5-.71-.2-.08-.35-.11-.5.11-.15.22-.57.71-.7.86-.13.15-.26.16-.48.06-1.32-.6-2.18-1.06-3.05-2.41-.23-.4.23-.37.66-1.23.07-.15.04-.27-.03-.38-.07-.11-.62-1.49-.85-2.04-.22-.53-.45-.46-.62-.47-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.64 1.11 2.83.14.18 1.86 2.84 4.5 3.87 2.23.87 2.23.58 2.6.54.37-.04 1.3-.53 1.48-1.04.18-.51.18-.95.13-1.04-.05-.1-.2-.16-.42-.27Z"/></svg>
+        WhatsApp Us
+      </a>
+      <a href="tel:+918879148416" class="btn btn--ghost">Call +91 88791 48416</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">✦ Indraprastha</div>
+      <p class="footer-brand-sub">A small holiday home with a tradition of coastal hospitality, near Aaravi Beach, Shrivardhan.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <a href="#about">About</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:+918879148416">+91 88791 48416</a>
+        <a href="https://wa.me/918879148416">WhatsApp</a>
+        <p>Aaravi, Shrivardhan, Raigad</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Indraprastha Holiday Homes. All rights reserved.</span>
+    <span>Near Hanuman Temple, Aaravi Beach</span>
+  </div>
+</footer>
+
+<!-- ============ FLOATING ACTIONS ============ -->
+<div class="float-actions">
+  <a href="https://wa.me/918879148416" class="fab fab--wa">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.74 13.41L3 21l3.7-1.28a8.9 8.9 0 0 0 4.33 1.1h.01a8.94 8.94 0 0 0 6.31-15.3l.25-.2ZM12.06 19.4a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8 1 .94-2.73-.18-.28a7.43 7.43 0 1 1 6.08 3.2Z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+  <a href="tel:+918879148416" class="fab">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Call</span>
+  </a>
+</div>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive:true });
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', false);
+  }));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // 3D tilt on room cards
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(900px) rotateY(0) rotateX(0)';
+    });
+  });
+
+  // Lightbox for gallery
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('.gallery-item img, .room-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+</script>
+
+</body>
 </html>
